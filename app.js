@@ -10,7 +10,11 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res){
- res.render("home");
+ res.render("landing");
+});
+
+app.get("/mapa", function(req, res){
+    res.render("mapa");
 });
 
 app.get("/quem-somos", function(req, res){
