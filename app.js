@@ -17,7 +17,6 @@ app.get("/", function(req, res){
 
 app.use("/mapa", mapaRoutes);
 
-
 app.get("/quem-somos", function(req, res){
     res.render("quem-somos");
 });
