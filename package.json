@@ -22,6 +22,7 @@
     "express": "^4.17.1",
     "express-static": "^1.2.6",
     "jquery": "^3.4.1",
+    "mqtt": "^3.0.0",
     "paho-mqtt": "^1.1.0"
   }
 }
