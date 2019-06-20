@@ -1,8 +1,7 @@
 const   express       = require("express"),
         bodyParser    = require("body-parser"),
         // Paho          = require("paho-mqtt"),
-        app           = express(),
-        mapaRoutes    = require("./routes/mapa");
+        app           = express();
 
 const port = 3000;
 const ip = "localhost";
@@ -15,7 +14,9 @@ app.get("/", function(req, res){
  res.render("landing");
 });
 
-app.use("/mapa", mapaRoutes);
+app.use("/mapa", function(req, res){
+    res.render("mapa");
+});
 
 app.get("/quem-somos", function(req, res){
     res.render("quem-somos");

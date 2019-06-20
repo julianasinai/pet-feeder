@@ -3,6 +3,24 @@
                 <p>@ Equipe 4 - Pet-feeder</p>
             </div>
         </footer>
+        <script>
+            const url = "https://io.adafruit.com/api/v2/lecircuit1/feeds";
+            const xhrbtn = document.getElementById("StatusVasilha");
+            const display = document.getElementById("dataSensor");
+                
+            xhrbtn.addEventListener("click", function(){
+                const XHR = new XMLHttpRequest();
+                XHR.onreadystatechange = function(){
+                    if(XHR.readyState === 4 && XHR.status === 200){
+                        const data = JSON.parse(XHR.responseText)[0].last_value;//transforma a str em um objeto
+                        console.log(JSON.parse(XHR.responseText)[0].last_value);
+                        display.innerText = data;
+                    }
+                }
+                XHR.open("GET", url);
+                XHR.send();
+            });
+        </script>
         <!-- <script type="text/javascript" src="/scripts/map.js"></script> -->
     </body>
 </html>
