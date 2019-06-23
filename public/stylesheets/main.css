@@ -10,6 +10,10 @@
     padding: 2rem 2rem;
 }
 
+.is-child.box p { 
+    text-align: justify;
+  }
+
 .equipe {
     /* margin-top: 2rem; */
     text-align: center;
