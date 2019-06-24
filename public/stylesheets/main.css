@@ -14,6 +14,10 @@
     color: #f26522;
 }
 
+.has-text-purple {
+    color: #6f5499!important;
+}
+
 .is-child.box p { 
     text-align: justify;
   }
