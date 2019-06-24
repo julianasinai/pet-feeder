@@ -25,8 +25,8 @@ function getData(){
     XHR.onreadystatechange = function(){
         if(XHR.readyState === 4 && XHR.status === 200){
             const data = JSON.parse(XHR.responseText)[0].last_value;//transforma a str em um objeto
-            console.log(JSON.parse(XHR.responseText)[0].last_value);
-            el.innerText = data;
+            console.log(JSON.parse(XHR.responseText));
+            el.innerText = "Status: " + data + "%";
         }
     }
     XHR.open("GET", url);
