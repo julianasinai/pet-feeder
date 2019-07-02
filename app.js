@@ -1,6 +1,5 @@
 const   express       = require("express"),
         bodyParser    = require("body-parser"),
-        // Paho          = require("paho-mqtt"),
         app           = express();
 
 const port = 3000;
