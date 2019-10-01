@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    if ($navbarBurgers.length > 0) {
+    if ($navbarBurgers.length > 0) { //data analysis
         $navbarBurgers.forEach( el => {
             el.addEventListener('click', () => {
                 const target = el.dataset.target;
